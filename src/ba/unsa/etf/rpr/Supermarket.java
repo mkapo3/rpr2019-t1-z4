@@ -5,9 +5,13 @@ public class Supermarket {
     private Artikl [] artikls = new Artikl [1000];
     private int broj_artikala=0;
 
-    public void dodajArtikl (Artikl t) {
+    public boolean dodajArtikl (Artikl t) {
+        if(broj_artikala==kapacitet)
+            return false;
         artikls[broj_artikala] = t;
         broj_artikala=broj_artikala+1;
+
+        return true;
     }
 
     public Artikl[] getArtikli() {

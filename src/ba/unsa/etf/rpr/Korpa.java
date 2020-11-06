@@ -20,6 +20,7 @@ public class Korpa {
     }
 
 
+
     public Artikl izbaciArtiklSaKodom(String kod) {
         for(int i=0; i<broj_artikala; i++)
 
@@ -37,7 +38,7 @@ public class Korpa {
         int suma=0;
         for(int i=0; i<broj_artikala; i++)
             if(artikls[i]!=null)
-            suma=suma+artikls[broj_artikala].getCijena();
+            suma=suma+artikls[i].getCijena();
         return suma;
     }
 }

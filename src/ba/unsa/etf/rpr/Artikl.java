@@ -23,7 +23,11 @@ public class Artikl {
         return cijena;
     }
 
-    public void ispisi(){
-        System.out.println(naziv_artikla + " " + cijena + " " + kod);
+    @Override
+    public boolean equals (Object a){
+        if(this.getCijena()==((Artikl)a).getCijena() && this.getKod()==((Artikl)a).getKod()
+                && this.getNaziv()==((Artikl)a).getNaziv()) return true;
+        return false;
     }
+
 }
